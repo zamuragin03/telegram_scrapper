@@ -6,8 +6,6 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: bot
-    depends_on:
-      - backend
     restart: always
 volumes:
   db_backup:

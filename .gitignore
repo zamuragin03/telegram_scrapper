@@ -1,0 +1,5 @@
+DB_volume/data.db
+DB_volume/debug.log
+*.session
+venv
+Config/config.ini

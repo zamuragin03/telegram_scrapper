@@ -8,6 +8,6 @@ services:
     container_name: bot
     restart: always
     volumes:
-      - db_backup:app/DB_volume
+      - db_backup:/app/DB_volume
 volumes:
   db_backup:

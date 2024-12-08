@@ -9,6 +9,7 @@ from Service import KeywordService, ParseMessagesService
 async def get_messages():
     async with client:
         messages = await client.get_messages('by_ot_ka', limit=100)
+        # return messages
         return filter(ParseMessagesService.FilterLastMinuteMessages, messages)
         
 

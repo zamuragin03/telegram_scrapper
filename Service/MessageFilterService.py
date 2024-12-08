@@ -13,7 +13,8 @@ class MessageFilterService:
     
     def contains_keywords(self, text, keywords):
         normalized_text = self.normalize_text(text)
-        for keyword in keywords:
+        normalized_keywords = [self.morph.parse(word)[0].normal_form for word in keywords]
+        for keyword in normalized_keywords:
             if keyword.lower() in normalized_text:
                 return True
         return False
